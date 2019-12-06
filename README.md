@@ -3,33 +3,33 @@
 User's Interface first exercise on web design.
 ----
 
-# Links to sections on this README:
-* [Group Details](#group-#1:)
-* [Exercise Progress](#exercise-progress:)
-* [Reference Images](#reference-images:)
-* [Color Palette](#color-palette:)
-* [Comments](#comments:)
+## README Section Index:
+* [Group Details](https://github.com/Fernprlz/UI_Case_Study#group-1)
+* [Exercise Progress](https://github.com/Fernprlz/UI_Case_Study#exercise-progress)
+* [Reference Images](https://github.com/Fernprlz/UI_Case_Study#reference-images)
+* [Color Palette](https://github.com/Fernprlz/UI_Case_Study#color-palette)
+* [Comments](https://github.com/Fernprlz/UI_Case_Study#comments)
 
 #### Group #1:
  - @fernprlz
 
-    Fernando P�rez Lozano - 100383462@alumnos.uc3m.es
+    Fernando Pérez Lozano - 100383462@alumnos.uc3m.es
  - @avinuelap
 
-    Antonio Vi�uela P�rez - 100383461@alumnos.uc3m.es
- - @ Marcos
+    Antonio Viñuela Pérez - 100383461@alumnos.uc3m.es
+ - @marcosArranz
 
     Marcos Arranz Escuder - 100383---@alumnos.uc3m.es
- - @ Cris
+ - @newKryss
 
     Cristian Sevillano Vicente - 100383---@alumnos.uc3m.es
 ---
 
 ### Exercise Progress:
-* [ ] Home page.
+* [X] Home page.
     * [X] Header.
-    * [ ] Body.
-    * [ ] Footer.
+    * [X] Body.
+    * [X] Footer.
     * [ ] Login Modal.
     * [ ] RegisterModal.
 * [ ] Dashboard (Functionality is optional).
@@ -75,3 +75,7 @@ e6e6e6 | d1dfe6 | b3b3b3 | 3c525 | a8c6fa | ffd8ad
 # Comments:
 * Podriamos meter en la primera caja con el parrafo alguna imagen o algo para que no quede tan vacío.
 * Me da ansiedad que no esten centrados el "Tasker" del header y el del footer, se me ocurre que podemos flotarlos de alguna forma cambiando la posicion en z o algo asi... Estan asi por culpa del justify-content: space-between;
+
+---
+
+## [Go up](https://github.com/Fernprlz/UI_Case_Study#final-practice---case-study-on-user-interfaces)
