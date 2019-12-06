@@ -11,23 +11,25 @@ User's Interface first exercise on web design.
 
     Antonio Viñuela Pérez - 100383461@alumnos.uc3m.es
  - @ Marcos
+
     Marcos Arranz Escuder - 100383---@alumnos.uc3m.es
  - @ Cris
+
     Cristian Sevillano Vicente - 100383---@alumnos.uc3m.es
 ---
 
 ### Exercise Progress:
-  * [x] Home page.
+  * [ ] Home page.
 	* [ ] Login Modal.
 	* [ ] RegisterModal.
-  * [x] Dashboard (Functionality is optional).
+  * [ ] Dashboard (Functionality is optional).
   * [ ] Panel View
 	* [ ] Task Details.
 	* [ ] Add Category.
 ---
 
-### Reference Image:
-#### Home Page
+# Reference Images:
+# Home Page
 
 <p align="center">
   <img src="/images/homepage.png" alt="Not working, huh?">
@@ -35,20 +37,21 @@ User's Interface first exercise on web design.
   <img src="/images/register.png" alt="Not working, huh?">
 </p>
 
-#### Dashboard
+# Dashboard
 
 <p align="center">
   <img src="/images/dashboard.png" alt="Not working, huh?">
   <img src="/images/dashboard-menu.png" alt="Not working, huh?">
 </p>
 
-#### Panel View
+# Panel View
 
 <p align="center">
   <img src="/images/panel.png" alt="Not working, huh?">
   <img src="/images/add-category.png" alt="Not working, huh?">
   <img src="/images/add-task.png" alt="Not working, huh?">
 </p>
+
 ---
 
 ### Color Palette:
