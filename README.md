@@ -3,13 +3,20 @@
 User's Interface first exercise on web design.
 ----
 
+# Links to sections on this README:
+* [Group Details](#group-#1:)
+* [Exercise Progress](#exercise-progress:)
+* [Reference Images](#reference-images:)
+* [Color Palette](#color-palette:)
+* [Comments](#comments:)
+
 #### Group #1:
  - @fernprlz
 
-    Fernando Pérez Lozano - 100383462@alumnos.uc3m.es
+    Fernando Pï¿½rez Lozano - 100383462@alumnos.uc3m.es
  - @avinuelap
 
-    Antonio Viñuela Pérez - 100383461@alumnos.uc3m.es
+    Antonio Viï¿½uela Pï¿½rez - 100383461@alumnos.uc3m.es
  - @ Marcos
 
     Marcos Arranz Escuder - 100383---@alumnos.uc3m.es
@@ -19,13 +26,16 @@ User's Interface first exercise on web design.
 ---
 
 ### Exercise Progress:
-  * [ ] Home page.
-	* [ ] Login Modal.
-	* [ ] RegisterModal.
-  * [ ] Dashboard (Functionality is optional).
-  * [ ] Panel View
-	* [ ] Task Details.
-	* [ ] Add Category.
+* [ ] Home page.
+    * [X] Header.
+    * [ ] Body.
+    * [ ] Footer.
+    * [ ] Login Modal.
+    * [ ] RegisterModal.
+* [ ] Dashboard (Functionality is optional).
+* [ ] Panel View
+    * [ ] Task Details.
+    * [ ] Add Category.
 ---
 
 # Reference Images:
@@ -56,6 +66,12 @@ User's Interface first exercise on web design.
 
 ### Color Palette:
 <h2 align="center">
-[To be decided]
+<img src="/images/palette.png" alt="Not working, huh?">
+e6e6e6 | d1dfe6 | b3b3b3 | 3c525 | a8c6fa | ffd8ad
 </h2>
 
+---
+
+# Comments:
+* Podriamos meter en la primera caja con el parrafo alguna imagen o algo para que no quede tan vacÃ­o.
+* Me da ansiedad que no esten centrados el "Tasker" del header y el del footer, se me ocurre que podemos flotarlos de alguna forma cambiando la posicion en z o algo asi... Estan asi por culpa del justify-content: space-between;

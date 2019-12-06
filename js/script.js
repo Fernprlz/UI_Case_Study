@@ -1,3 +1,16 @@
+/*
+* - CAMBIOS EN NOMBRES DE ID'S:
+* SI PONE RIP ES QUE HA SIDO ELIMINADO POR AHORA
+* username = brand - RIP
+* options = head-buttons
+*
+*- CAMBIOS EN NOMBRES DE CLASES:
+* option-button = head-button
+* section-title = box-title
+*/
+
+
+
 var activityID
 var currentModalID
 var panelID
