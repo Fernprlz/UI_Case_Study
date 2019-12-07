@@ -56,11 +56,45 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/EE-xtCF3T94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <!-- Sign In Button -->
-      <button type="button" class="body-button shadowy">
-        <a href="register-sample.html">Sign In!</a>
-      </button>
+      <!-- Sign-in modal -->
+      <div class="modal-signin" id="signin">
+        <div class="signin-header">
+          <h1 class="box-title" id="signin-title"> Sign In </h1>
+        </div>
+        <div class="signin-input">
+          <input class="input-field" type="text" placeholder="Username" name="username" required>
+          <input class="input-field" type="password" placeholder="Password" name="password" required>
+        </div>
+        <button type="submit" class="signin-button shadowy" id="login-button1">
+          <a href="index.html">Log in</a>
+        </button>
+        <button type="submit" class="signin-button shadowy" id="register-button1">
+          <a href="index.html">Register</a>
+        </button>
+      </div>
 
+      <!-- Register modal -->
+      <div class="modal-register" id="register">
+        <div class="signin-header">
+          <h1 class="box-title"> Register </h1>
+        </div>
+        <div class="signin-input">
+          <input class="input-field" type="text" placeholder="Username" name="username" required>
+            <input class="input-field" type="text" placeholder="Email address" name="email" required>
+          <input class="input-field" type="password" placeholder="Password" name="password" required>
+        </div>
+        <button type="submit" class="signin-button shadowy" id="register-button2">
+          <a href="index.html">Register</a>
+        </button>
+        <h3 id="alreadyRegistered">Already registered?</h3>
+        <button type="submit" class="signin-button shadowy" id="login-button2">
+          <a href="index.html">Log in</a>
+        </button>
+      </div>
+
+      <!-- Sign In Button -->
+      <!-- <button onclick="openModal('modal-signin')" type="button" class="body-button shadowy">Sign In!</button> -->
+      <button onclick="openModalEj('signin')" type="button" class="body-button shadowy">Sign in!</button>
     </div>
     <!-- Footer -->
 

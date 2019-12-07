@@ -170,8 +170,10 @@ body{
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.modal{
-  position: fixed;
+
+/* ------<< Modal elements >>----- */
+/*.modal{
+  position: absolute;
   display: block;
   top: 50%;
   left: 50%;
@@ -180,13 +182,107 @@ body{
   z-index: 10;
   background-color: #d5d6d9;
   width: 40%;
+  height: 50%;
   max-width: 80%;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   border: 1px solid black;
+  margin-left: -20%;
+  margin-top: -10%;
+}*/
+
+.modal-signin{
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: #d5d6d9;
+  width: 40%;
+  height: 50%;
+  max-width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid black;
+  margin-left: -20%;
+  margin-top: -10%;
 }
-.modal.active{
+.modal-register{
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: #d5d6d9;
+  width: 40%;
+  height: 50%;
+  max-width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 1px solid black;
+  margin-left: -20%;
+  margin-top: -10%;
+}
+/*.modal.active{
   transform: translate(-50%, -50%) scale(1);
   transition: 200ms ease-in-out;
+}*/
+.modal-signin.active{
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+}
+.modal-register.active{
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms ease-in-out;
+}
+#signin-title{
+  text-align: center;
+}
+.signin-input{
+  margin: 0px 10px 10px -10px;
+}
+.input-field{
+  margin-bottom: 5px;
+}
+
+.signin-button{
+  font-size: 150%;
+  border-style: hidden;
+  background-color: #d5d6d9;
+  width: 40%;
+  padding: 15px 25px 15px 25px;
+  margin: 0px 10% 25px 10%;
+}
+#login-button1{
+  display:block;
+  margin-left: 30%;
+  margin-top: 7%;
+}
+#register-button1{
+  display:block;
+  margin-left: 30%;
+}
+#login-button2{
+  display:block;
+  margin-left: 30%;
+  margin-top: 0%;
+}
+#alreadyRegistered{
+  text-align: center;
+}
+#register-button2{
+  display:block;
+  margin-left: 30%;
 }
 .modal-title{
   text-align: center;
@@ -194,7 +290,6 @@ body{
   font-size: 1.25rem;
   font-family: "Roboto";
   font-weight: bold;
-
 }
 .modal-buttons{
   align-items: center;
@@ -202,7 +297,6 @@ body{
   justify-content: space-between;
   margin-left: 30%;
   margin-right: 30%;
-
 }
 .modal-socials{
   align-items: center;

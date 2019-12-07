@@ -16,7 +16,7 @@ var currentModalID
 var panelID
 var numberOfVerticalBoxes = 3
 
-function openModal(elem, modalID){
+function openModalEj(elem, modalID){
   setActivityID(elem)
   setPanelID(elem)
   currentModalID = modalID
@@ -24,6 +24,13 @@ function openModal(elem, modalID){
   if (modalID == "modalShare"){
     prepareShare()
   }
+  const modal = document.getElementById(currentModalID)
+  modal.classList.add("active")
+  const overlay = document.getElementById("overlay")
+  overlay.classList.add("active")
+}
+
+function openModal(modalID){
   const modal = document.getElementById(currentModalID)
   modal.classList.add("active")
   const overlay = document.getElementById("overlay")
