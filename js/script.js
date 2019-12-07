@@ -16,25 +16,17 @@ var currentModalID
 var panelID
 var numberOfVerticalBoxes = 3
 
-function openModalEj(elem, modalID){
-  setActivityID(elem)
-  setPanelID(elem)
-  currentModalID = modalID
-  // Open Modal
-  if (modalID == "modalShare"){
-    prepareShare()
-  }
-  const modal = document.getElementById(currentModalID)
-  modal.classList.add("active")
-  const overlay = document.getElementById("overlay")
-  overlay.classList.add("active")
-}
-
 function openModal(modalID){
-  const modal = document.getElementById(currentModalID)
+  const modal = document.getElementById(modalID)
   modal.classList.add("active")
-  const overlay = document.getElementById("overlay")
-  overlay.classList.add("active")
+  if (modalID == "signin"){
+    const overlay = document.getElementById("overlay-signin")
+    overlay.classList.add("active")
+  }
+  else if (modalID == "register"){
+    const overlay = document.getElementById("overlay-register")
+    overlay.classList.add("active")
+  }
 }
 
 function prepareShare(){
@@ -68,20 +60,16 @@ function setPanelID(elem){
 }
 
 function closeModal(choice){
-  const modal = document.getElementById(currentModalID)
+  const modal = document.getElementById(choice)
   modal.classList.remove("active")
-  const overlay = document.getElementById("overlay")
-  overlay.classList.remove("active")
-  if (currentModalID == "modalDelete" && choice.id == "yes")
-  removeElementByID(activityID)
-  else if (currentModalID == "modalArchive" && choice.id == "yes") {
-    removeElementByID(panelID)
-    --numberOfVerticalBoxes;
-    resizeVerticalBoxes()
+  if (choice == "signin"){
+    const overlay = document.getElementById("overlay-signin")
+    overlay.classList.remove("active")
   }
-
-  activityID = null
-  currentModalID = null
+  else if (choice == "register"){
+    const overlay = document.getElementById("overlay-register")
+    overlay.classList.remove("active")
+  }
 }
 
 function removeElementByID(elementId) {

@@ -172,77 +172,47 @@ body{
 }
 
 /* ------<< Modal elements >>----- */
-/*.modal{
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  z-index: 10;
-  background-color: #d5d6d9;
-  width: 40%;
-  height: 50%;
-  max-width: 80%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  border: 1px solid black;
-  margin-left: -20%;
-  margin-top: -10%;
-}*/
-
 .modal-signin{
   position: absolute;
   display: block;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 35%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
-  background-color: #d5d6d9;
-  width: 40%;
-  height: 50%;
-  max-width: 80%;
+  background-color: white;
+  max-width: 30%;
+  height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 40px;
   padding-right: 40px;
   border: 1px solid black;
-  margin-left: -20%;
-  margin-top: -10%;
 }
 .modal-register{
   position: absolute;
   display: block;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 35%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
-  background-color: #d5d6d9;
-  width: 40%;
-  height: 50%;
-  max-width: 80%;
+  background-color: white;
+  max-width: 30%;
+  height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 40px;
   padding-right: 40px;
   border: 1px solid black;
-  margin-left: -20%;
-  margin-top: -10%;
 }
-/*.modal.active{
-  transform: translate(-50%, -50%) scale(1);
-  transition: 200ms ease-in-out;
-}*/
+
 .modal-signin.active{
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: 200ms ease-in-out;
 }
 .modal-register.active{
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   transition: 200ms ease-in-out;
 }
 #signin-title{
@@ -308,7 +278,7 @@ body{
 .popup-button{
   cursor: pointer;
 }
-#overlay{
+#overlay-signin{
   position: fixed;
   opacity: 0;
   top: 0;
@@ -320,7 +290,23 @@ body{
   pointer-events: none;
   transition: 200ms ease-in-out;
 }
-#overlay.active{
+#overlay-signin.active{
+  opacity: 1;
+  pointer-events: all;
+}
+#overlay-register{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+#overlay-register.active{
   opacity: 1;
   pointer-events: all;
 }
@@ -437,24 +423,22 @@ iframe{
   background-color: #d5d6d9;
   padding: 15px 25px 15px 25px;
   margin: 0px 10% 25px 10%;
+  cursor: pointer;
 }
 /* ------<< Input Form >>----- */
 .registration{
   display: block;
-  padding: 20px 15% 5% 15%;
+  padding: 0;
   text-align: center;
   align-content: center;
-
 }
 .form-info-box{
   background-color: white;
-  min-height: 100px;
-  min-width: 300px;
   display: block;
   padding: 1px 10% 20px 10%;
   align-content: flex-end;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 
 }
 .form-terms-box{
@@ -472,12 +456,11 @@ iframe{
   background-color: white;
   min-height: 80px;
   display: flex;
-  padding: 5px 10% 5px 10%;
+  padding: 5px 5% 5px 5%;
   width: auto;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 20px;
 }
 #terms-conditions{
   text-align: left;
@@ -491,6 +474,9 @@ iframe{
 .form-button{
   background-color: #a0a2ad;
   width: 40%;
+  min-height: 50px;
+  display: block;
+  cursor: pointer;
 }
 /* ---------------------------- */
 
