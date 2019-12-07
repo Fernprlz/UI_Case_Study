@@ -1,4 +1,4 @@
-# Final Practice - Case Study on User Interfaces
+﻿# Final Practice - Case Study on User Interfaces
 
 User's Interface first exercise on web design.
 ----
@@ -19,10 +19,10 @@ User's Interface first exercise on web design.
     Antonio Viñuela Pérez - 100383461@alumnos.uc3m.es
  - @marcosArranz
 
-    Marcos Arranz Escuder - 100383---@alumnos.uc3m.es
+    Marcos Arranz Escuder - 100383521@alumnos.uc3m.es
  - @newKryss
 
-    Cristian Sevillano Vicente - 100383---@alumnos.uc3m.es
+    Cristian Sevillano Vicente - 100383513@alumnos.uc3m.es
 ---
 
 ### Exercise Progress:
@@ -32,7 +32,7 @@ User's Interface first exercise on web design.
     * [X] Footer.
     * [ ] Login Modal.
     * [ ] RegisterModal.
-* [ ] Dashboard (Functionality is optional).
+* [X] Dashboard (Functionality is optional).
 * [ ] Panel View
     * [ ] Task Details.
     * [ ] Add Category.

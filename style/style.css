@@ -99,6 +99,7 @@ p {
   display: block;
 }
 
+
 /* ---<< HEAD MENU >>--- */
 #headbox {
   background-color: #a0a2ad;
@@ -133,7 +134,9 @@ h1 {
 
 #brand{
   color: #d1dfe6;
-  text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.7);7
+  position: absolute;
+  left: 200px;
 }
 
 #head-buttons {
@@ -157,8 +160,18 @@ h1 {
   background: url('/images/english.svg') no-repeat center;
   background-size: cover;
 }
+
+.searchBar{
+  position: relative;
+  top:-8px;
+  left: 5px;
+  border-radius: 15px;
+  border-style: hidden;
+}
+
+
 /* ------<< BODY >>----- */
-body{
+body {
   margin: 0;
 }
 
@@ -304,14 +317,11 @@ body{
 .vertical-box{
   width: 100%;
   height: 100%;
-  min-height: 500px;
-  padding-bottom: 10px;
+  min-height: 680px;
   padding-top: 25px;
-  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #ffffff;
+  background-color: #d1dfe6;
 }
 .box {
   width: 100%;
@@ -340,11 +350,114 @@ iframe{
 .body-button{
   font-size: 40px;
   border-style: hidden;
-  background-color: #d5d6d9;
+  background-color: #e6e6e6;
   padding: 15px 25px 15px 25px;
   margin: 0px 10% 25px 10%;
+  margin-left: 44%;
+  
 }
+
+.panels-box{
+  border-top: 1px solid grey;
+  height: 250px;
+  width: auto;
+  padding-left: 3%;
+  padding-bottom: 5px;
+  overflow: auto;
+}
+
+.calendar-box{
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  max-width: 400px;
+  background-color: #ffffff;
+}
+
+.deadlines-title{
+  margin-left: 15%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.deadlines-box{
+  border: 1px solid grey;
+  height: 550px;
+  width: 400px;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.big-box{
+  width: 100%;
+  height: 100%;
+  min-height: 590px;
+  max-width: 400px;
+  margin-top: 1%;
+  margin-left: 15%;
+}
+
+.add-button{
+  border-radius: 7px;
+  border: 1px solid black;
+  text-align: center;
+  height: 100px;
+  width: 150px;
+  margin-left: 5%;
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.panel-button{
+  border-radius: 7px;
+  border: 1px solid black;
+  text-align: center;
+  height: 100px;
+  width: 150px;
+  font-size: 16px;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.deadline{
+  border-bottom: 1px solid grey;
+  width: auto;
+  min-height: 95px;
+  margin-top: 5%;
+  padding-left: 5%;
+  style: inline-block;
+}
+
+.details{
+  max-width: 200px;
+}
+
+.deadline-button{
+  border: 1px solid black;
+  height: 50px;
+  width: 75px;
+  border-radius: 5px;
+  margin-left: 10%;
+}
+
+.caja{
+  height: auto;
+  width: 100px;
+  style: inline;
+  float: left;
+  padding-top: 3%;
+}
+
+.no-caja{
+  height: auto;
+  width: 200px;
+  float: right;
+  padding-top: 2%;
+}
+
 /* ------<< Input Form >>----- */
+
+
 .registration{
   display: block;
   padding: 20px 15% 5% 15%;
@@ -398,7 +511,8 @@ iframe{
   background-color: #a0a2ad;
   width: 40%;
 }
-/* ---------------------------- */
+
+
 
 /* ------<< Footer >>----- */
 #footer-links{
@@ -457,6 +571,7 @@ footer{
 
 /*****************************************/
 
+
 {box-sizing: border-box;}
 
 /* Style the input container */
@@ -498,4 +613,81 @@ footer{
 
 .btn:hover {
   opacity: 1;
+}
+
+
+/* ------ CALENDAR THINGIES ------- */
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+
+.month {
+  padding: 15px 15px;
+  width: 100%;
+  background: #e6e6e6;
+  text-align: center;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  margin-bottom: 6px;
+  font-size:12px;
+  color: black;
+}
+
+.days li .active {
+  padding: 5px;
+  background: grey;
+  color: white !important
 }

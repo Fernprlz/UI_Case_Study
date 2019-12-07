@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<!-- Head Data -->
+<head>
+  <title>Tasker!</title>
+
+  <!-- Meta-Data -->
+  <meta charset="utf-8"/>
+  <meta name="author" content="Fernando Pérez Lozano, Antonio Viñuela Pérez, Cristian Sevillano Vicente & Marcos Arranz Escudero"/>
+  <meta name="description" content="Final Case Study for User Interfaces">
+
+  <!-- CSS Stylesheet Link -->
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <!-- JavaScript Script Link -->
+  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Icon library -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<!-- Header -->
+<header class="panel shadowy" id="headbox">
+
+  <div style="in-line">
+    <img class="logo" src="images/user-circular.png" alt="UserImage"/>
+    <img class="logo" src="images/home-icon.png" alt="UserImage"/>
+    <input class="searchBar" type="text" placeholder="  Search..." name="search">
+  </div>
+
+  <h1  id="brand">Welcome!</h1>
+
+  <!-- Header Option Menu -->
+  <nav id="head-buttons">
+    <button type="button" class="head-button">
+      <a href="#">Help</a>
+    </button>
+    <button type="button" class="head-button language-button">
+      <a href="index.html"></a>
+    </button>
+  </nav>
+
+</header>
+
+<!-- Body -->
+<body>
+  <div id="site-back" class="main">
+
+    <!-- Main White Box -->
+    <div class="panel vertical-box shadowy">
+    
+      <!-- Panels and Calendar box -->
+        <div class="big-box">
+	  <h1> My panels </h1>
+	  <div class="panels-box">
+	    <button class="add-button" style="background-color:white">+</button>
+	    <button class="panel-button" style="background-color:light grey"> Home Chores </button>
+	    <button class="panel-button" style="background-color:#a8c6fa"> Football Team </button>
+	    <button class="panel-button" style="background-color:#ffd8ad"> Kids activities </button>
+	    <button class="panel-button" style="background-color:#98F399"> Job work </button>
+	  </div>
+	  <h1> Calendar view </h1>
+          <div class="calendar-box">
+	    <div class="month">      
+  		<ul>
+    		  <li class="prev">&#10094;</li>
+    		  <li class="next">&#10095;</li>
+    		  <li>
+      		    December<br>
+      		    <span style="font-size:18px">2019</span>
+    		  </li>
+  		</ul>
+	    </div>
+	    <ul class="weekdays">
+  		<li>Mo</li>
+  		<li>Tu</li>
+  		<li>We</li>
+  		<li>Th</li>
+  		<li>Fr</li>
+  		<li>Sa</li>
+  		<li>Su</li>
+	    </ul>
+
+	    <ul class="days">  
+  		<li>1</li>
+ 		 <li>2</li>
+ 		 <li>3</li>
+ 		 <li>4</li>
+ 		 <li>5</li>
+ 		 <li>6</li>
+ 		 <li>7</li>
+  		 <li>8</li>
+  		 <li>9</li>
+  		 <li>10</li>
+  		 <li>11</li>
+  		 <li>12</li>
+  		 <li>13</li>
+  		 <li>14</li>
+  		 <li>15</li>
+  		 <li>16</li>
+  		 <li>17</li>
+  		 <li>18</li>		
+	         <li>19</li>
+  		 <li>20</li>
+  		 <li>21</li>
+  		 <li><span class="active">22</span></li>
+  		 <li>23</li>
+  		 <li>24</li>
+  		 <li>25</li>
+  		 <li>26</li>
+  		 <li>27</li>
+  		 <li>28</li>
+  		 <li>29</li>
+  		 <li>30</li>
+  		 <li>31</li>
+	    </ul>
+	  </div>
+
+        </div>
+
+      <!-- Deadlines box -->
+        <div class="deadlines-title"> <h1> Incoming Deadlines </h1>
+          <div class="deadlines-box">
+	    <div class="deadline">
+	      <div class="caja"> <button class="deadline-button"></button> </div>
+	      <div class="no-caja"> <p class="details"> Dentist appointment <br> 21/11/19 15:15 <br> #Health #Dentist </p> </div>
+	    </div>
+	      
+	    <div class="deadline">
+	      <div class="caja"> <button class="deadline-button"></button> </div>
+	      <div class="no-caja"> <p class="details"> Deliver Task 1 <br> 25/12/19 23:59 <br> #School #Interfaces </p> </div>
+	    </div>
+	      
+	    <div class="deadline">
+	      <div class="caja"> <button class="deadline-button" style="background-color:#ffd8ad"></button> </div>
+	      <div class="no-caja"> <p class="details"> Disneyland Trip! <br> 04/01/19 8:45 <br> #Fun #Family </p> </div>
+	    </div>
+	      
+	    <div class="deadline">
+	      <div class="caja"> <button class="deadline-button"></button> </div>
+	      <div class="no-caja"> <p class="details"> Deliver Task 2 <br> 12/01/20 23:59 <br> #School #Interfaces </p> </div>
+	    </div>
+
+	    <div class="deadline">
+	      <div class="caja"> <button class="deadline-button"></button> </div>
+	      <div class="no-caja"> <p class="details"> Granma's birthday <br> 16/06/20 23:59 <br> #Family #Birthday </p> </div>
+	    </div>
+
+          </div>
+
+        </div>
+    </div>
+
+    <!-- End of the Site-Back -->
+  </div>
+
+</body>
+</html>
