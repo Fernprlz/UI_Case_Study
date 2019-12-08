@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Head Data -->
+<head>
+  <title>UI_Exercise_1</title>
+
+  <!-- Meta-Data -->
+  <meta charset="utf-8"/>
+  <meta name="author" content="Fernando Pérez Lozano & Antonio Viñuela Pérez"/>
+  <meta name="description" content="First Exercise on User Interfaces">
+
+  <!-- CSS Stylesheet Link -->
+  <link rel="stylesheet" href="style/style2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <!-- JavaScript Script Link -->
+  <script src="js/script2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<!-- Header -->
+<header class="panel" id="headbox">
+  <button type="button" class="option-button3">
+    <img id="profile-image" src="images/personal.png" alt="UserImage"/>
+  </button>
+
+  <h1 id="username">Tasker!</h1>
+
+  <!-- Header Option Menu -->
+  <nav id="options">
+    <button type="button" class="option-button">
+      <a href="registerPage.html">Help</a>
+    </button>
+    <button type="button" class="option-button2">
+      <a href="index2.html"><img class="logoadd2" src="images/uk.png" alt="ActivityImage"/></a>
+    </button>
+  </nav>
+
+</header>
+
+<!-- Body -->
+<body>
+  <div id="site-back">
+
+  <div class="xxx">
+    <h2 class="xxx-title">Panel Name
+      <img class="top-logo" src="images/pencil.png "/>
+      <img class="top-logo2" src="images/settings.png "/>
+
+    </h2>
+  </div>
+    <!-- Modal PopUp // Delete Activiy -->
+    <div class="panel modal" id="modalDelete">
+      <div class="modal-header">
+        <h2 class="modal-title">Are you sure you want to delete the activity</h2>
+      </div>
+      <div class="modal-buttons">
+        <button onclick="closeModal(this)" class="popup-button" id="yes">Si</button>
+        <button onclick="closeModal(this)" class="popup-button" id="no">No</button>
+      </div>
+    </div>
+
+    <!-- Modal PopUp // Archive List Confirmation -->
+    <div class="panel modal" id="modalArchive">
+      <div class="modal-header">
+        <h2 class="modal-title">Category Info</h2>
+      </div>
+      <div class="modal-buttons">
+        <form onsubmit="return false;">
+    				Category Title: <input type="category" id="logmail" name="category" required>
+  				<p> </p>
+  			</form>
+      </div>
+      <div class="save button">
+      <button class="save-button" onclick="closeModal(this)" id="yes">Save</button>
+      </div>
+    </div>
+    <!-- Added feature where the user can exit the modal by clicking outside it -->
+    <div onclick="closeModal(this)" id="overlay"></div>
+
+    <!-- A Panel -->
+    <div class="vertical-box" id="panelA">
+      <div class="vertical-box-header">
+        <h2>Category 1</h2>
+        <div class="dropdown">
+          <img onclick="openModal(this, 'modalArchive')" class="icon hamburguer-icon" src="images/pencil.png " alt="WebLogo"/>
+        </div>
+      </div>
+      <!----------------------------->
+      <div class="panel activity" id="A1">
+        <div class="outer-activity">
+          <div class="activity-inner-part activity-top-part">
+            <h3 class="activity-title">Dentist Appointment </h3>
+            <button onclick="openModal(this, 'modalDelete')" class="delete">&times</button>
+          </div>
+          <div class="activity-inner-part activity-middle-part">
+            <h3 class="activity-date">10/05/2019</h3><h3 class="activity-hour">12:00</h3>
+          </div>
+          <div class="activity-inner-part activity-bottom-part">
+          <h3 class= "hashtags">#Health</h3><h3 class="hashtags"> #Dentist</h3>
+          </div>
+        </div>
+      </div>
+      <!----------------------------->
+      <div class= "add activity" id="D1">
+        <img class="logoadd" src="images/plus.png" alt="ActivityImage"/>
+      </div>
+      <!----------------------------->
+    </div>
+
+    <!-- B Panel -->
+    <div class="vertical-box" id="panelB">
+      <div class="vertical-box-header">
+        <h2>Category 1</h2>
+        <div class="dropdown">
+          <img onclick="openModal(this, 'modalArchive')" class="icon hamburguer-icon" src="images/pencil.png " alt="WebLogo"/>
+        </div>
+      </div>
+
+      <!----------------------------->
+      <div class="panel activity" id="A2">
+        <div class="outer-activity">
+          <div class="activity-inner-part activity-top-part">
+            <h3 class="activity-title">Deliver Task 1</h3>
+            <button onclick="openModal(this, 'modalDelete')" class="delete">&times</button>
+          </div>
+          <div class="activity-inner-part activity-middle-part">
+            <h3 class="activity-date">31/10/2019</h3> <h3 class="activity-hour">06:00</h3>
+          </div>
+          <div class="activity-inner-part activity-bottom-part">
+          <h3 class= "hashtags">#School</h3><h3 class="hashtags"> #Interfaces</h3>
+          </div>
+
+        </div>
+      </div>
+      <!----------------------------->
+      <div class="panel activity" id="A3">
+        <div class="outer-activity">
+          <div class="activity-inner-part activity-top-part">
+            <h3 class="activity-title">Deliver Task 2</h3>
+            <button onclick="openModal(this, 'modalDelete')" class="delete">&times</button>
+          </div>
+          <div class="activity-inner-part activity-middle-part">
+            <h3 class="activity-date">31/10/2019</h3> <h3 class="activity-hour">19:00</h3>
+          </div>
+          <div class="activity-inner-part activity-bottom-part">
+          <h3 class= "hashtags">#School</h3><h3 class="hashtags"> #Interfaces</h3>
+          </div>
+        </div>
+      </div>
+      <!----------------------------->
+      <div class="panel activity" id="A4">
+        <div class="outer-activity">
+          <div class="activity-inner-part activity-top-part">
+            <h3 class="activity-title">Grandma's birthday</h3>
+            <button onclick="openModal(this, 'modalDelete')" class="delete">&times</button>
+          </div>
+          <div class="activity-inner-part activity-bottom-part">
+            <h3 class="activity-date">31/10/2019</h3> <h3 class="activity-hour">19:00</h3>
+          </div>
+          <div class="activity-inner-part activity-bottom-part">
+          <h3 class= "hashtags">#Family</h3><h3 class="hashtags"> #birthday</h3>
+          </div>
+        </div>
+      </div>
+      <!----------------------------->
+      <div class= "add activity" id="D2">
+        <img class="logoadd" src="images/plus.png" alt="ActivityImage"/>
+      </div>
+      <!----------------------------->
+    </div>
+
+    <!-- C Panel -->
+    <div class="vertical-box" id="panelC">
+      <div class= "add-category" id="D3">
+        <img onclick="openModal(this, 'modalArchive')" class="logo-category" src="images/big-plus.png" alt="ActivityImage"/>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <p id="footer-text">
+        TravelCounsel Copyright &copy; 2019
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

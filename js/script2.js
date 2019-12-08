@@ -1,16 +1,3 @@
-/*
-* - CAMBIOS EN NOMBRES DE ID'S:
-* SI PONE RIP ES QUE HA SIDO ELIMINADO POR AHORA
-* username = brand - RIP
-* options = head-buttons
-*
-*- CAMBIOS EN NOMBRES DE CLASES:
-* option-button = head-button
-* section-title = box-title
-*/
-
-
-
 var activityID
 var currentModalID
 var panelID
@@ -24,6 +11,9 @@ function openModal(elem, modalID){
   if (modalID == "modalShare"){
     prepareShare()
   }
+
+
+
   const modal = document.getElementById(currentModalID)
   modal.classList.add("active")
   const overlay = document.getElementById("overlay")
@@ -72,10 +62,17 @@ function closeModal(choice){
     --numberOfVerticalBoxes;
     resizeVerticalBoxes()
   }
-
   activityID = null
   currentModalID = null
 }
+
+function creteTask(choice){
+  
+
+}
+
+
+
 
 function removeElementByID(elementId) {
   // Removes an element from the document
@@ -253,22 +250,4 @@ window.onload = function(){
     pageTitle.innerHTML = newTitle
     localStorage.removeItem("titleUsername");
   }
-}
-
-function allowDrop(event){
-  event.preventDefault();
-}
-
-function drag(event){
-  event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event){
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-function notAllowDrop(event){
-  event.stopPropagation();
 }
