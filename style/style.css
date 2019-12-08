@@ -455,12 +455,9 @@ iframe{
 .form-buttons-box{
   background-color: white;
   min-height: 80px;
-  display: flex;
+  display: block;
   padding: 5px 5% 5px 5%;
   width: auto;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 #terms-conditions{
   text-align: left;
@@ -477,6 +474,7 @@ iframe{
   min-height: 50px;
   display: block;
   cursor: pointer;
+  margin: 5% auto 5% auto;
 }
 /* ---------------------------- */
 
