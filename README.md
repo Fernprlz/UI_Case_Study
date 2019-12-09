@@ -1,4 +1,4 @@
-# Final Practice - Case Study on User Interfaces
+﻿# Final Practice - Case Study on User Interfaces
 
 User's Interface first exercise on web design.
 ----
@@ -19,10 +19,10 @@ User's Interface first exercise on web design.
     Antonio Viñuela Pérez - 100383461@alumnos.uc3m.es
  - @marcosArranz
 
-    Marcos Arranz Escuder - 100383---@alumnos.uc3m.es
+    Marcos Arranz Escuder - 100383521@alumnos.uc3m.es
  - @newKryss
 
-    Cristian Sevillano Vicente - 100383---@alumnos.uc3m.es
+    Cristian Sevillano Vicente - 100383513@alumnos.uc3m.es
 ---
 
 ### Exercise Progress:
@@ -30,10 +30,10 @@ User's Interface first exercise on web design.
     * [X] Header.
     * [X] Body.
     * [X] Footer.
-    * [ ] Login Modal.
-    * [ ] RegisterModal.
-* [ ] Dashboard (Functionality is optional).
-* [ ] Panel View
+    * [X] Login Modal.
+    * [X] RegisterModal.
+* [X] Dashboard (Functionality is optional).
+* [X] Panel View
     * [ ] Task Details.
     * [ ] Add Category.
 ---
@@ -74,7 +74,6 @@ e6e6e6 | d1dfe6 | b3b3b3 | 3c525 | a8c6fa | ffd8ad
 
 # Comments:
 * Podriamos meter en la primera caja con el parrafo alguna imagen o algo para que no quede tan vacío.
-* Me da ansiedad que no esten centrados el "Tasker" del header y el del footer, se me ocurre que podemos flotarlos de alguna forma cambiando la posicion en z o algo asi... Estan asi por culpa del justify-content: space-between;
 
 ---
 
