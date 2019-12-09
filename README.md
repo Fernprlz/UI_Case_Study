@@ -34,8 +34,8 @@ User's Interface first exercise on web design.
     * [X] RegisterModal.
 * [X] Dashboard (Functionality is optional).
 * [X] Panel View
-    * [ ] Task Details.
-    * [ ] Add Category.
+    * [X] Task Details.
+    * [X] Add Category.
 ---
 
 # Reference Images:

@@ -308,3 +308,22 @@ function drop(event){
 function notAllowDrop(event){
   event.stopPropagation();
 }
+
+/* uses a modal when trying to edit something */
+function edit(myModal, shareID){
+  var modal = document.getElementById(myModal);
+  var btn = document.getElementById(shareID);
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  /* closes if you click out of it */
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}

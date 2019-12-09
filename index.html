@@ -17,7 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Icon Library Link-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/f42db1cb53.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/f42db1cb53.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Header -->
@@ -30,8 +30,7 @@
   <!-- Header Option Menu -->
   <nav id="head-buttons">
     <button onclick="openModal('signin')" type="button" class="head-button">
-      <a>Sign In</a>
-    </button>
+      Sign In </button>
     <button type="button" class="head-button language-button">
       <a href="index.html"></a>
     </button>
@@ -60,75 +59,73 @@
       <!-- Sign-in modal -->
       <div class="modal-signin registration" id="signin">
         <form name="loginForm" onsubmit="return logIn()" method="get">
-          <div class="panel form-info-box">
-            <h3 class="box-title">Sign In</h3>
+         <div class="panel form-info-box">
+           <h3 class="box-title">Sign In</h3>
 
-            <div class="input-container">
-              <i class="fa fa-envelope form-icon"></i>
-              <input class="input-field" type="text" placeholder="Email" name="email" required>
-            </div>
+           <div class="input-container">
+             <i class="fa fa-envelope form-icon"></i>
+             <input class="input-field" type="text" placeholder="Email" name="email" required>
+           </div>
 
-            <div class="input-container">
-              <i class="fa fa-key form-icon"></i>
-              <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
-            </div>
+           <div class="input-container">
+             <i class="fa fa-key form-icon"></i>
+             <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
+           </div>
 
-          </div>
+         </div>
 
-          <div class="panel form-buttons-box">
-            <button class="form-button" type="submit" name="login">Log In</button>
-            <button onclick="openModal('register'); closeModal('signin')" class="form-button" type="reset" name="register">Register</button>
-          </div>
-        </form>
+         <div class="panel form-buttons-box">
+           <button class="form-button" type="submit" name="login">Log In</button>
+           <button onclick="openModal('register'); closeModal('signin')" class="form-button" type="reset" name="register">Register</button>
+         </div>
+         </form>
       </div>
 
       <!-- Added feature where the user can exit the modal by clicking outside it -->
-      <div onclick="closeModal('signin')" id="overlay-signin"></div>
+          <div onclick="closeModal('signin')" id="overlay-signin"></div>
 
       <!-- Register modal -->
       <div class="modal-register registration" id="register">
+        <form name="loginForm" onsubmit="return validateForm()" method="get">
+         <div class="panel form-info-box">
+           <h3 class="box-title">Register</h3>
 
-        <form name="registrationForm" onsubmit="return validateForm()" method="get">
-          <div class="panel form-info-box">
-            <h3 class="box-title">Register</h3>
+           <div class="input-container">
+             <i class="fa fa-user form-icon"></i>
+             <input class="input-field" type="text" placeholder="Username" name="username" required>
+           </div>
 
-            <div class="input-container">
-              <i class="fa fa-user form-icon"></i>
-              <input class="input-field" type="text" placeholder="Username" name="username" required>
-            </div>
+           <div class="input-container">
+             <i class="fa fa-envelope form-icon"></i>
+             <input class="input-field" type="text" placeholder="Email" name="email" required>
+           </div>
 
-            <div class="input-container">
-              <i class="fa fa-envelope form-icon"></i>
-              <input class="input-field" type="text" placeholder="Email" name="email" required>
-            </div>
+           <div class="input-container">
+             <i class="fa fa-key form-icon"></i>
+             <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
+           </div>
 
-            <div class="input-container">
-              <i class="fa fa-key form-icon"></i>
-              <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
-            </div>
+         </div>
 
-          </div>
-
-          <div class="panel form-buttons-box">
-            <button class="form-button" type="submit" name="register">Register</button>
-            <h5 class="box-title">Already have an account?</h5>
-            <button onclick="openModal('signin'); closeModal('register')" class="form-button" type="button" name="login">Log in</button>
-          </div>
-        </form>
+         <div class="panel form-buttons-box">
+           <button class="form-button" type="submit" name="register">Register</button>
+           <h5 class="box-title">Already have an account?</h5>
+           <button onclick="openModal('signin'); closeModal('register')" class="form-button" type="button" name="login">Log in</button>
+         </div>
+         </form>
       </div>
 
       <!-- Added feature where the user can exit the modal by clicking outside it -->
-      <div onclick="closeModal('register')" id="overlay-register"></div>
+          <div onclick="closeModal('register')" id="overlay-register"></div>
 
       <!-- Sign In Button -->
-      <button onclick="openModal('signin')" type="button" class="body-button shadowy">
-        <a>Sign in!</a>
-      </button>
+      <!-- <button onclick="openModal('modal-signin')" type="button" class="body-button shadowy">Sign In!</button> -->
+      <button onclick="openModal('signin')" type="button" class="body-button shadowy">Sign in!</button>
     </div>
     <!-- Footer -->
 
     <footer class="panel">
-      <!-- Policies Links -->
+        <!-- Policies Links -->
       <li id="footer-links">
         <ul>
           <a href="index.html">Privacy Policy</a>
@@ -143,11 +140,11 @@
           <a href="index.html">F.A.Q.</a>
         </ul>
       </li>
-      <!-- Brand -->
+        <!-- Brand -->
       <h1 id="footer">
         &copy; Tasker!
       </h1>
-      <!-- Socials -->
+        <!-- Socials -->
       <span class="socials">
         <a href="https://www.instagram.com">
           <img class="socials-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png"  title="Instagram" alt="Instagram Logo">

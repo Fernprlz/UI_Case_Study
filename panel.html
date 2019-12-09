@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="hack-fix" lang="es">
 <!-- Head Data -->
 <head>
@@ -15,14 +15,15 @@
   <!-- JavaScript Script Link -->
   <script src="js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <!-- Google Icons Link -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 
 <!-- Header -->
 <header class="panel shadowy" id="headbox">
   <span>
-    <img class="logo" src="images/test-logo.png" alt="UserImage"/>
+    <img class="logo" src="images/user-circular.png" alt="UserImage"/>
     <img class="logo-home" src="images/home-icon.png" alt="UserImage"/>
     <input class="searchBar" type="text" placeholder="  Search..." name="search">
   </span>
@@ -46,221 +47,110 @@
 <body>
   <div id="site-back">
 
-    <!-- Modal PopUp // Delete Activiy -->
-    <div class="panel modal" id="modalDelete">
-      <div class="modal-header">
-        <h2 class="modal-title">Are you sure you want to delete the activity</h2>
-      </div>
-      <div class="modal-buttons">
-        <button onclick="closeModalPanel(this)" class="popup-button" id="yes">Si</button>
-        <button onclick="closeModalPanel(this)" class="popup-button" id="no">No</button>
-      </div>
-    </div>
-
     <!-- Modal PopUp // Share Activiy -->
     <div class="panel modal" id="modalShare">
       <div class="modal-header">
         <h2 class="modal-title">This text will be replaced by the Title of the activity.</h2>
       </div>
       <div class="modal-socials">
-        <a class="socials-icon" href="https://www.instagram.com">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" class="socials-icon" title="Instagram" alt="Instagram Logo">
-        </a>
-        <a class="socials-icon" href="https://www.twitter.com">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1024px-Twitter_bird_logo_2012.svg.png" class="socials-icon" title="Twitter" alt="Twitter Logo">
-        </a>
-        <a class="socials-link" href="https://www.facebook.com">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/600px-Facebook_Logo_%282019%29.png" class="socials-icon" title="Facebook" alt="Facebook Logo">
-        </a>
+        <p> aaaaa </p>
       </div>
     </div>
 
-    <!-- Modal PopUp // Archive List Confirmation -->
-    <div class="panel modal" id="modalArchive">
-      <div class="modal-header">
-        <h2 class="modal-title">Are you sure you want to archive this list?</h2>
-      </div>
-      <div class="modal-buttons">
-        <button onclick="closeModalPanel(this)" class="popup-button" id="yes">Si</button>
-        <button onclick="closeModalPanel(this)" class="popup-button" id="no">No</button>
-      </div>
-    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-    <!-- Added feature where the user can exit the modal by clicking outside it -->
-    <div onclick="closeModalPanel(this)" id="overlay"></div>
+       <!-- Modal content -->
+  	<div class="modal-content">
+    	  <span class="close">&times;</span>
+    	   <h1 class="task-info-title"> Task info</h1>
+	   <form class="task-information">
+	     <!-- Modal fields to enter -->
+	     Task Title:
+  	     <input type="text" name="title" placeholder="title"><p> </p>
+  	     <br>
+  	     Task Time:
+  	     <input type="text" name="time" placeholder="time"><p> </p>
+  	     <br>
+	     Task Date:
+             <input type="date" name="date" value=""><p> </p>
+	     <br>
+	     Task Tags:
+	     <input type="text" name="tags" placeholder="Ex: #Dogs #Weekend #Friends"><p> </p>
+	
+	     <!-- Rating -->
+             <h4 class="task-info-xd"> Task Importance: <br> <i class="material-icons">star</i>
+	     <i class="material-icons">star</i><i class="material-icons">star</i>
+	     <i class="material-icons">star</i><i class="material-icons">star</i> </h4>
+	     
+	     <!-- Contributors -->
+	     <h4 class="task-info-xd"> Contributors: <br> <i class="material-icons">account_circle</i> <i class="material-icons">group_add</i> </h4>
+             <br>
+	   
+	     <!-- Submit button -->  	
+  	     <input class="task-info-xd" type="submit" value="Save">
 
-    <!-- A Panel -->
-    <div class="panel vertical-box-2" id="panelA">
-
-      <div class="vertical-box-header">
-        <h2>Done</h2>
-        <div class="dropdown">
-          <img onclick="openModalPanel(this, 'modalArchive')" class="icon hamburguer-icon" src="images/pencil.png " alt="WebLogo"/>
-        </div>
-      </div>
-
-
-      <!----------------------------->
-      <div class="panel activity" id="A1">
-        <div class="outer-activity">
-          <div class="activity-inner-part activity-top-part">
-            <h3 class="activity-title">Dentist Appointment</h3>
-            <button onclick="openModalPanel(this, 'modalDelete')" class="delete">&times</button>
-          </div>
-          <div class="activity-inner-part activity-middle-part">
-            <h3 class="activity-date">10/05/2019</h3>
-            <h3 class="activity-date">12:00</h3>
-          </div>
-          <div class="activity-inner-part activity-middle-part">
-            <h3 class="activity-date">#Health</h3>
-            <h3 class="activity-date">#Dentist</h3>
-          </div>
-          <div class="activity-inner-part activity-bottom-part">
-            <div class="tooltip">
-              <img onclick="like(this)" class="icon" src="images/like0.png" alt="LikeButton"/>
-              <span class="tooltiptext">Like this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img onclick="openModalPanel(this, 'modalShare')" class="icon" src="images/share.png" alt="ShareButton"/>
-              <span class="tooltiptext">Share this activity!</span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <!----------------------------->
+	   </form>
+  	</div>
 
     </div>
-    <!-- A Panel -->
-    <div class="panel vertical-box-2" id="panelA">
+    
+    <!-- ---------------------------------------------------------------------- -->
 
-      <div class="vertical-box-header">
-        <h2>Done</h2>
-        <div class="dropdown">
-          <img onclick="openModalPanel(this, 'modalArchive')" class="icon hamburguer-icon" src="images/pencil.png " alt="WebLogo"/>
-        </div>
+    <!-- Second header -->
+    <div class="second-header">
+      <h1 class="second-header-title"> Panel Name &nbsp;&nbsp; <i class="material-icons">edit</i> <i class="material-icons">settings_applications</i> &nbsp; | &nbsp; <i class="material-icons">account_circle</i> <i class="material-icons">account_circle</i> <i class="material-icons">group_add</i> </h1>
+    </div>
+    
+    <!-- Panel box -->
+    <div class="panel-box" >
+
+      <!-- Category box -->
+      <div class="category">
+	<!-- Category title -->
+	<h4 class="category-title"> Category 1 <button class="edit-button"><i class="material-icons edit">edit</i></button> </h4>
+        
+	<div class="task-box">
+	  <!-- Task title -->
+	  <h5> Dentist appointment <button class="task-edit" id="myBtn" onclick="edit('myModal','myBtn')"><i class="material-icons edit" style="font-size:18px;">edit</i></button> </h5>
+	  <!-- Task details -->
+	  <p class="task-things"> 21/11/19 &nbsp;&nbsp;&nbsp; 15:45 <br> #Health &nbsp; #Dentist </p>
+	</div>
+	<button class="task-add"> + </button>
+      </div>
+ 
+      <div class="category">
+	<!-- Category title -->
+	<h4 class="category-title"> Category 1 <button class="edit-button" id="myBtn" onclick="edit('myModal','myBtn')"><i class="material-icons edit">edit</i></button> </h4>
+        
+	<div class="task-box">
+	  <!-- Task title -->
+	  <h5> Deliver Task 1 <button class="task-edit" id="myBtn1" onclick="edit('myModal','myBtn1')"><i class="material-icons edit" style="font-size:18px;">edit</i></button> </h5>
+	  <!-- Task details -->
+	  <p class="task-things"> 25/12/19 &nbsp;&nbsp;&nbsp; 23:59 <br> #School &nbsp; #Interfaces </p>
+	</div>
+	
+	<div class="task-box">
+	  <!-- Task title -->
+	  <h5> Deliver Task 2 <button class="task-edit" id="myBtn2" onclick="edit('myModal','myBtn2')"><i class="material-icons edit" style="font-size:18px;">edit</i></button> </h5>
+	  <p class="task-things"> 12/01/20 &nbsp;&nbsp;&nbsp; 23:59 <br> #School &nbsp; #Interfaces </p>
+	</div>
+
+	<div class="task-box">
+	  <!-- Task title -->
+	  <h5> Grandma's Birthday <button class="task-edit" id="myBtn3" onclick="edit('myModal','myBtn3')"><i class="material-icons edit" style="font-size:18px;">edit</i></button> </h5>
+	  <p class="task-things"> 16/04/20 &nbsp;&nbsp;&nbsp; 23:59 <br> #Family &nbsp; #Birthday </p>
+	</div>
+
+	<!-- New task button -->
+	<button class="task-add"> + </button>
       </div>
 
-      <!----------------------------->
-      <div class="panel activity" id="A1">
-        <div class="outer-activity">
-          <div class="activity-inner-part activity-top-part">
-            <img class="logo" src="images/tail.png" alt="ActivityImage"/>
-            <h3 class="activity-title">Find my tail</h3>
-            <button onclick="openModalPanel(this, 'modalDelete')" class="delete">&times</button>
-          </div>
-          <div class="activity-inner-part activity-bottom-part">
-            <div class="tooltip">
-              <img onclick="like(this)" class="icon" src="images/like0.png" alt="LikeButton"/>
-              <span class="tooltiptext">Like this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img class="icon" src="images/comment.png" alt="CommentButton"/>
-              <span class="tooltiptext">Comment about this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img onclick="openModalPanel(this, 'modalShare')" class="icon" src="images/share.png" alt="ShareButton"/>
-              <span class="tooltiptext">Share this activity!</span>
-            </div>
-            <h3 class="activity-date">10/05/2019 12:00</h3>
-          </div>
-        </div>
-      </div>
-      <!----------------------------->
-
-      <!----------------------------->
-      <div class="panel activity" id="A2">
-        <div class="outer-activity">
-          <div class="activity-inner-part activity-top-part">
-            <img class="logo" src="images/love.png" alt="ActivityImage"/>
-            <h3 class="activity-title">Love my family</h3>
-            <button onclick="openModalPanel(this, 'modalDelete')" class="delete">&times</button>
-          </div>
-          <div class="activity-inner-part activity-bottom-part">
-            <div class="tooltip">
-              <img onclick="like(this)" class="icon" src="images/like0.png" alt="LikeButton"/>
-              <span class="tooltiptext">Like this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img class="icon" src="images/comment.png" alt="CommentButton"/>
-              <span class="tooltiptext">Comment about this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img onclick="openModalPanel(this, 'modalShare')" class="icon" src="images/share.png" alt="ShareButton"/>
-              <span class="tooltiptext">Share this activity!</span>
-            </div>
-            <h3 class="activity-date">30/10/2019 18:39</h3>
-          </div>
-        </div>
-      </div>
-      <!----------------------------->
+      <!-- New category button -->
+      <button class="category-add"> + </button>
 
     </div>
-    <!-- A Panel -->
-    <div class="panel vertical-box-2" id="panelA">
 
-      <div class="vertical-box-header">
-        <h2>Done</h2>
-        <div class="dropdown">
-          <img onclick="openModalPanel(this, 'modalArchive')" class="icon hamburguer-icon" src="images/pencil.png " alt="WebLogo"/>
-        </div>
-      </div>
-
-      <!----------------------------->
-      <div class="panel activity" id="A1">
-        <div class="outer-activity">
-          <div class="activity-inner-part activity-top-part">
-            <img class="logo" src="images/tail.png" alt="ActivityImage"/>
-            <h3 class="activity-title">Find my tail</h3>
-            <button onclick="openModalPanel(this, 'modalDelete')" class="delete">&times</button>
-          </div>
-          <div class="activity-inner-part activity-bottom-part">
-            <div class="tooltip">
-              <img onclick="like(this)" class="icon" src="images/like0.png" alt="LikeButton"/>
-              <span class="tooltiptext">Like this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img class="icon" src="images/comment.png" alt="CommentButton"/>
-              <span class="tooltiptext">Comment about this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img onclick="openModalPanel(this, 'modalShare')" class="icon" src="images/share.png" alt="ShareButton"/>
-              <span class="tooltiptext">Share this activity!</span>
-            </div>
-            <h3 class="activity-date">10/05/2019 12:00</h3>
-          </div>
-        </div>
-      </div>
-      <!----------------------------->
-
-      <!----------------------------->
-      <div class="panel activity" id="A2">
-        <div class="outer-activity">
-          <div class="activity-inner-part activity-top-part">
-            <img class="logo" src="images/love.png" alt="ActivityImage"/>
-            <h3 class="activity-title">Love my family</h3>
-            <button onclick="openModalPanel(this, 'modalDelete')" class="delete">&times</button>
-          </div>
-          <div class="activity-inner-part activity-bottom-part">
-            <div class="tooltip">
-              <img onclick="like(this)" class="icon" src="images/like0.png" alt="LikeButton"/>
-              <span class="tooltiptext">Like this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img class="icon" src="images/comment.png" alt="CommentButton"/>
-              <span class="tooltiptext">Comment about this activity!</span>
-            </div>
-            <div class="tooltip">
-              <img onclick="openModalPanel(this, 'modalShare')" class="icon" src="images/share.png" alt="ShareButton"/>
-              <span class="tooltiptext">Share this activity!</span>
-            </div>
-            <h3 class="activity-date">30/10/2019 18:39</h3>
-          </div>
-        </div>
-      </div>
-      <!----------------------------->
-
-    </div>
   </div>
 </body>
 </html>
