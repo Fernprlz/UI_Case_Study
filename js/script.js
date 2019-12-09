@@ -9,26 +9,45 @@
 * section-title = box-title
 */
 
-
-
 var activityID
 var currentModalID
 var panelID
 var numberOfVerticalBoxes = 3
 
-function openModal(elem, modalID){
+function openModal(modalID){
+  const modal = document.getElementById(modalID)
+  modal.classList.add("active")
+  if (modalID == "signin"){
+    const overlay = document.getElementById("overlay-signin")
+    overlay.classList.add("active")
+  }
+  else if (modalID == "register"){
+    const overlay = document.getElementById("overlay-register")
+    overlay.classList.add("active")
+  }
+}
+
+
+// Opens a modal (pop-up) depending on its ID
+function openModalPanel(elem, modalID){
+  // Global variables are set so we can access them later
+  // these are activity and panel ID, so we can operate with them in archive/remove/share
   setActivityID(elem)
   setPanelID(elem)
   currentModalID = modalID
-  // Open Modal
+
+  // Set Share pop-up title to the activity title
   if (modalID == "modalShare"){
     prepareShare()
   }
+
+  // Make the modal and the overlay visibles
   const modal = document.getElementById(currentModalID)
   modal.classList.add("active")
   const overlay = document.getElementById("overlay")
   overlay.classList.add("active")
 }
+
 
 function prepareShare(){
   const activityChild = document.querySelectorAll('#' + activityID + ' .activity-title')
@@ -61,18 +80,35 @@ function setPanelID(elem){
 }
 
 function closeModal(choice){
+  const modal = document.getElementById(choice)
+  modal.classList.remove("active")
+  if (choice == "signin"){
+    const overlay = document.getElementById("overlay-signin")
+    overlay.classList.remove("active")
+  }
+  else if (choice == "register"){
+    const overlay = document.getElementById("overlay-register")
+    overlay.classList.remove("active")
+  }
+}
+
+// Close the modal and perform pertinent actions
+function closeModalPanel(choice){
   const modal = document.getElementById(currentModalID)
   modal.classList.remove("active")
   const overlay = document.getElementById("overlay")
   overlay.classList.remove("active")
   if (currentModalID == "modalDelete" && choice.id == "yes")
-  removeElementByID(activityID)
+    // Remove the selected activity
+    removeElementByID(activityID)
   else if (currentModalID == "modalArchive" && choice.id == "yes") {
+    // Remove the vertical box and resize the ones still active
     removeElementByID(panelID)
     --numberOfVerticalBoxes;
     resizeVerticalBoxes()
   }
 
+  // Reset global variables
   activityID = null
   currentModalID = null
 }
@@ -86,7 +122,7 @@ function removeElementByID(elementId) {
 function resizeVerticalBoxes(){
   // go inside each vertical box
   // set width to 100/numberOfVerticalBoxes
-  const verticalBoxArray = document.querySelectorAll('.vertical-box')
+  const verticalBoxArray = document.querySelectorAll('.vertical-box-2')
   for(var ii = 0; ii < verticalBoxArray.length; ii++){
     var newWidth = (100/numberOfVerticalBoxes) - 0.3
     verticalBoxArray[ii].style.width = newWidth +"%";
@@ -153,7 +189,7 @@ function validateForm(){
     } else {
       storeCookie(email, password, username)
       alert("Account created succesfully!")
-      window.location.replace("loginPage.html")
+      window.location.replace("index.html")
       // Return false so that the redirection works insted of going to the page
       // that is generated after submitting the form.
       return false;
@@ -186,7 +222,7 @@ function logIn(){
 
   if(correctLogIn(email, password)){
     // Load the page
-    window.location.replace("index2.html")
+    window.location.replace("dashboard.html")
 
     // Change the page title to the username
     // First save the username in a global variable

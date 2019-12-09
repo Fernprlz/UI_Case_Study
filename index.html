@@ -15,18 +15,22 @@
   <!-- JavaScript Script Link -->
   <script src="js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Icon Library Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/f42db1cb53.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Header -->
 <header class="panel shadowy" id="headbox">
+
   <img class="logo" src="images/test-logo.png" alt="UserImage"/>
 
   <h1  id="brand">Tasker!</h1>
 
   <!-- Header Option Menu -->
   <nav id="head-buttons">
-    <button type="button" class="head-button">
-      <a href="register-sample.html">Sign In</a>
+    <button onclick="openModal('signin')" type="button" class="head-button">
+      <a>Sign In</a>
     </button>
     <button type="button" class="head-button language-button">
       <a href="index.html"></a>
@@ -38,34 +42,93 @@
 <!-- Body -->
 <body>
   <div id="site-back">
-
     <!-- Main White Box -->
     <div class="panel vertical-box shadowy">
 
       <!-- Inner Box 1 -->
-
       <div class="panel box shadowy">
         <h1 class="box-title">Tasker! "Forget about forgetting"</h1>
         <p class="box-text">Tasker! Is a platform to organize events and tasks for your own purposes. In addition, you can create joint task panels with other users to coordinate bigger scale activities. Your tasks will be displayed clearly so you don't miss anything!</p>
       </div>
 
       <!-- Inner Box 2 -->
-
       <div class="panel box shadowy">
         <h1 class="box-title">See an explanatory video!</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/EE-xtCF3T94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
-      <!-- Sign In Button -->
-      <button type="button" class="body-button shadowy">
-        <a href="register-sample.html">Sign In!</a>
-      </button>
+      <!-- Sign-in modal -->
+      <div class="modal-signin registration" id="signin">
+        <form name="loginForm" onsubmit="return logIn()" method="get">
+          <div class="panel form-info-box">
+            <h3 class="box-title">Sign In</h3>
 
+            <div class="input-container">
+              <i class="fa fa-envelope form-icon"></i>
+              <input class="input-field" type="text" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-key form-icon"></i>
+              <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
+            </div>
+
+          </div>
+
+          <div class="panel form-buttons-box">
+            <button class="form-button" type="submit" name="login">Log In</button>
+            <button onclick="openModal('register'); closeModal('signin')" class="form-button" type="reset" name="register">Register</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Added feature where the user can exit the modal by clicking outside it -->
+      <div onclick="closeModal('signin')" id="overlay-signin"></div>
+
+      <!-- Register modal -->
+      <div class="modal-register registration" id="register">
+
+        <form name="registrationForm" onsubmit="return validateForm()" method="get">
+          <div class="panel form-info-box">
+            <h3 class="box-title">Register</h3>
+
+            <div class="input-container">
+              <i class="fa fa-user form-icon"></i>
+              <input class="input-field" type="text" placeholder="Username" name="username" required>
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-envelope form-icon"></i>
+              <input class="input-field" type="text" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="input-container">
+              <i class="fa fa-key form-icon"></i>
+              <input class="input-field" type="password" placeholder="Password (max 8 characters: [a-z] [0-9])" name="password" required>
+            </div>
+
+          </div>
+
+          <div class="panel form-buttons-box">
+            <button class="form-button" type="submit" name="register">Register</button>
+            <h5 class="box-title">Already have an account?</h5>
+            <button onclick="openModal('signin'); closeModal('register')" class="form-button" type="button" name="login">Log in</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Added feature where the user can exit the modal by clicking outside it -->
+      <div onclick="closeModal('register')" id="overlay-register"></div>
+
+      <!-- Sign In Button -->
+      <button onclick="openModal('signin')" type="button" class="body-button shadowy">
+        <a>Sign in!</a>
+      </button>
     </div>
     <!-- Footer -->
 
     <footer class="panel">
-        <!-- Policies Links -->
+      <!-- Policies Links -->
       <li id="footer-links">
         <ul>
           <a href="index.html">Privacy Policy</a>
@@ -80,11 +143,11 @@
           <a href="index.html">F.A.Q.</a>
         </ul>
       </li>
-        <!-- Brand -->
+      <!-- Brand -->
       <h1 id="footer">
         &copy; Tasker!
       </h1>
-        <!-- Socials -->
+      <!-- Socials -->
       <span class="socials">
         <a href="https://www.instagram.com">
           <img class="socials-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png"  title="Instagram" alt="Instagram Logo">
