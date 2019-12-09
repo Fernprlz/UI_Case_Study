@@ -1,6 +1,5 @@
 import subprocess
 
-subprocess.run(["del", "prepros-6.config"], shell=True)
 subprocess.run(["del", "README.html"], shell=True)
 subprocess.run(["git", "add", "."], shell=True)
 
@@ -9,3 +8,5 @@ cm = input();
 
 subprocess.run(["git", "commit", "-m", cm], shell=True)
 subprocess.run(["git", "push"], shell=True)
+subprocess.run(["fernprlz"], shell=True)
+subprocess.run(["Vw.67544"], shell=True)
